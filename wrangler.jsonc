@@ -1,0 +1,16 @@
+{
+  "name": "wechat-code-assistant",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "ai": {
+    "binding": "AI"
+  },
+  "vars": {
+    "AI_MODEL": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "MAX_CONTEXT_CHARS": "18000"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
