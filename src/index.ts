@@ -83,7 +83,7 @@ async function getRepoContext(repoInput: string, question: string, env: Env): Pr
 }
 
 async function answer(messages: ChatMessage[], env: Env): Promise<string> {
-  const model = env.AI_MODEL || "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
+  const model = env.AI_MODEL || "@cf/meta/llama-3.1-8b-instruct";
   const result = await env.AI.run(model as Parameters<Ai["run"]>[0], {
     messages: [{ role: "system", content: SYSTEM_PROMPT }, ...messages]
   } as never) as { response?: string; output_text?: string };
